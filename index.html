@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 網站名稱 -->
+    <title> Click </title>
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/title_32c.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/title_16c.png">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link href="https://fonts.cdnfonts.com/css/playfair-display-sc" rel="stylesheet">
+</head>
+<body>
+    <div class="loading_cover">
+        <div class="loading_cover_up"></div>
+        <div class="loading_cover_down"></div>
+        <div class="loading_bar_block">
+            <div class="loading_text">click</div>
+            <div id="loading-bar" class="loading_bar"></div>
+        </div>
+    </div>
+
+    <!-- 頁首 -->
+    <header class="header">
+        <ul class="header_left">
+            <li><a class="header_title" href="#bloom_">Bloom</a></li>
+            <li><a class="header_about" href="#about_">About</a></li>
+        </ul>
+        <ul class="header_right">
+            <li><a id="header-project" class="header_project" href="https://xv4upwjfkxu4glzu88ncjq.on.drv.tw/web20231206%E7%A5%9E%E4%BB%99%E8%B0%B7%E5%B0%88%E6%A1%88/" target="_blank">Project</a></li>
+            <li><a id="header-yt" class="header_yt" href="https://www.youtube.com/watch?v=JFC7QwIBVMo&feature=youtu.be&ab_channel=ELLYMILK" target="_blank">Youtube</a></li>
+            <li><a class="header_works" href="#image_">Works</a></li>
+        </ul>
+        <div class="sidebar">
+            <div id="image_" class="thumbnails">
+                <div>
+                    <a>
+                        <img src="images/plog/plog7.jpg" alt="" width="346" height="434" onclick="showGroup2(7)"><h3>plog</h3>
+                    </a>
+                    <a>
+                        <img src="images/sea/sea1.jpg" alt="" width="346" height="239" onclick="showGroup3(1)"><h3>sea</h3>
+                    </a>
+                </div>
+                <div>
+                    <a>
+                        <img src="images/forest/forest3.jpg" alt="" width="346" height="259" onclick="showGroup1(3)"><h3>forest</h3>
+                    </a>
+                    <a>
+                        <img src="images/plog/plog1.jpg" alt="" width="346" height="479" onclick="showGroup2(1)"><h3>plog</h3>
+                    </a>
+                </div>
+                <div>
+                    <a>
+                        <img src="images/sea/sea2.jpg" alt="" width="346" height="339" onclick="showGroup3(2)"><h3>sea</h3>
+                    </a>
+                    <a>
+                        <img src="images/forest/forest1.jpg" alt="" width="346" height="239" onclick="showGroup1(1)"><h3>forest</h3>
+                    </a>
+                </div>
+            </div>
+            <div id="myModal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+                    <div class="slide"></div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+
+            <div class="description">
+                <div class="about_info">
+                    <div id="about_" class="about">About</div>
+                    <div class="about_description">這攝影工作室由三位攝影剪輯愛好者組成<br>共同追求藝術與專業的完美結合<br>以獨特的攝影風格和剪輯的技術<br>致力於捕捉每一刻的美好<br>為客戶呈現獨特而感人的作品</div>
+                </div>
+    
+                <div class="bloom_info">
+                    <div id="bloom_" class="bloom">Bloom</div>
+                    <div class="bloom_description">我們結合另一組的團隊一起打造出更完善的旅遊系統<br>運用360相機帶大家看到我們眼中的苗栗<br>而另一組透過podcast與雜誌還有IG分享他們眼中的苗栗！</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 置中訊息 -->
+    <main>
+        <section class="video_container">
+            <div id="content", class="main-content">
+                <video autoplay muted loop playsinline id="fullscreen-video" class="fullscreen_video">
+                    <source src="film/film1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="wrapper">
+                <svg id="left-button" width="18px" height="17px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="prev" transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)">
+                        <polygon class="arrow" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                        <polygon class="arrow-fixed" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                    </g>
+                </svg>
+              
+                <svg id="right-button" width="18px" height="17px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g>
+                        <polygon class="arrow" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                        <polygon class="arrow-fixed" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                    </g>
+                </svg>
+            </div>
+
+            <div class="video_info">
+                <div class="video_title_info">
+                    <div class="video_title"><h1>#01</h1><h2>神仙谷</h2></div>
+                </div>
+                <div id="video-description" class="video_description">
+                    <p><em>幽靜的山谷，恐怖又迷人，<br>有人稱之為神仙谷，<br>也有人稱作死亡谷。</em></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
